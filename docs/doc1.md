@@ -13,9 +13,7 @@ slug: /
 Setup Instructions are Not currently available
 :::
 
-:::tip 
-Cloud hosting such as heroku is not recommended
-:::
+
 
 What is Alpha-Video? A skill to stream audio from Youtube to Your Alexa.
 
