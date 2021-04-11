@@ -74,10 +74,8 @@ def index():
 @app.route('/progress')
 def progress():
     def generate():
-        x = 0
-        while x <= 100:
+        for x in range(0, 101, 10):
             yield "data:" + str(x) + "\n\n"
-            x = x + 10
             time.sleep(0.5)
     return Response(generate(), mimetype= 'text/event-stream')
 
@@ -85,12 +83,12 @@ def progress():
 def create():
     if request.method == 'POST':
         title = request.form['title']
-        content = request.form['content']
-
         if not title:
             flash('Title is required!')
         else:
             conn = get_db_connection()
+            content = request.form['content']
+
             conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
                          (title, content))
             conn.commit()
@@ -127,12 +125,10 @@ def url_pro():
 
 @app.route('/env')
 def show_env():
-	log.info("route =>'/env' - hit")
-	env = {}
-	for k,v in request.environ.items(): 
-		env[k] = str(v)
-	log.info("route =>'/env' [env]:\n%s" % env)
-	return env
+    log.info("route =>'/env' - hit")
+    env = {k: str(v) for k,v in request.environ.items()}
+    log.info("route =>'/env' [env]:\n%s" % env)
+    return env
 
 @app.route("/logs", methods=["GET"])
 def logstream():
@@ -230,12 +226,12 @@ def edit(id):
 
     if request.method == 'POST':
         title = request.form['title']
-        content = request.form['content']
-
         if not title:
             flash('Title is required!')
         else:
             conn = get_db_connection()
+            content = request.form['content']
+
             conn.execute('UPDATE posts SET title = ?, content = ?'
                          ' WHERE id = ?',
                          (title, content, id))
