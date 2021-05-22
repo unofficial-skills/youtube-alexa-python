@@ -110,21 +110,21 @@ def playlist():
 
 @app.route('/create', methods=('GET', 'POST'))
 def create():
-    if request.method == 'POST':
-        title = request.form['title']
-        content = request.form['content']
+   if request.method == 'POST':
+      title = request.form['title']
+      if not title:
+         flash('Title is required!')
+      else:
+         conn = get_db_connection()
+         content = request.form['content']
 
-        if not title:
-            flash('Title is required!')
-        else:
-            conn = get_db_connection()
-            conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
-                         (title, content))
-            conn.commit()
-            conn.close()
-            return redirect(url_for('playlist'))
+         conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
+                      (title, content))
+         conn.commit()
+         conn.close()
+         return redirect(url_for('playlist'))
 
-    return render_template('create.html')
+   return render_template('create.html')
 
 @app.route('/<int:id>/delete', methods=('GET',))
 def delete(id):
@@ -143,33 +143,31 @@ def post(post_id):
 
 @app.route('/<int:id>/edit', methods=('GET', 'POST'))
 def edit(id):
-    post = get_post(id)
+   post = get_post(id)
 
-    if request.method == 'POST':
-        title = request.form['title']
-        content = request.form['content']
+   if request.method == 'POST':
+      title = request.form['title']
+      if not title:
+         flash('Title is required!')
+      else:
+         conn = get_db_connection()
+         content = request.form['content']
 
-        if not title:
-            flash('Title is required!')
-        else:
-            conn = get_db_connection()
-            conn.execute('UPDATE posts SET title = ?, content = ?'
-                         ' WHERE id = ?',
-                         (title, content, id))
-            conn.commit()
-            conn.close()
-            return redirect(url_for('playlist'))
+         conn.execute('UPDATE posts SET title = ?, content = ?'
+                      ' WHERE id = ?',
+                      (title, content, id))
+         conn.commit()
+         conn.close()
+         return redirect(url_for('playlist'))
 
-    return render_template('edit.html', post=post)
+   return render_template('edit.html', post=post)
 
 @app.route('/progress')
 def progress():
     def generate():
-        x = 0
-        while x <= 100:
-            yield "data:" + str(x) + "\n\n"
-            x = x + 10
-            time.sleep(0.5)
+       for x in range(0, 101, 10):
+          yield "data:" + str(x) + "\n\n"
+          time.sleep(0.5)
     return Response(generate(), mimetype= 'text/event-stream')
 
 @app.route('/log')
@@ -182,12 +180,10 @@ def progress_log():
 
 @app.route('/env')
 def show_env():
-	log.info("route =>'/env' - hit")
-	env = {}
-	for k,v in request.environ.items(): 
-		env[k] = str(v)
-	log.info("route =>'/env' [env]:\n%s" % env)
-	return env
+   log.info("route =>'/env' - hit")
+   env = {k: str(v) for k,v in request.environ.items()}
+   log.info("route =>'/env' [env]:\n%s" % env)
+   return env
 
 @app.route("/logstream", methods=["GET"])
 def logstream():
