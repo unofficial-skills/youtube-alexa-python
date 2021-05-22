@@ -17,6 +17,9 @@ ytdl_options = {
 
 ytdl = YoutubeDL(ytdl_options)
 
+ask = Ask(app, '/api')
+
+
 @ask.launch
 def launch():
     card_title = render_template('card_title')
