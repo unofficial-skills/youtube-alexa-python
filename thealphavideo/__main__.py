@@ -193,7 +193,6 @@ def show_env():
 def logstream():
     return render_template('logs.html')
 
-ask = Ask(app, '/api')
 
 import intents
 
