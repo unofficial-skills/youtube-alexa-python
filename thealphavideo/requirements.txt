@@ -1,6 +1,6 @@
 sentry-sdk[flask]
 Flask==1.1.1
-PyYAML==3.12
+PyYAML==5.4.1
 six==1.11.0
 Werkzeug==0.16.1
 youtube_dl
