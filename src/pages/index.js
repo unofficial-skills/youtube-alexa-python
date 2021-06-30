@@ -6,6 +6,13 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import Translate, {translate} from '@docusaurus/Translate';
+import { preferences } from 'service-worker-i18n-redirect/preferences';
+window.addEventListener('DOMContentLoaded', async () => {
+  const language = await preferences.get('lang');
+  if (language === undefined) {
+    preferences.set('lang', lang.value); // Language determined from localization user landed on
+  }
+});
 
 const features = [
   {
