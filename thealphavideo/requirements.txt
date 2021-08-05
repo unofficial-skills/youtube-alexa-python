@@ -7,5 +7,5 @@ pygtail
 pyfiglet
 Flask-Ask-alphavideo
 pytube
-PyYAML==3.12 # not directly required, pinned by Snyk to avoid a vulnerability
+PyYAML==4.2b1 # not directly required, pinned by Snyk to avoid a vulnerability
 requests
