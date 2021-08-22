@@ -7,7 +7,7 @@ charset-normalizer==2.0.4
 click==8.0.1
 colorama==0.4.4
 dj-database-url==0.5.0
-Django==2.2.18
+Django==2.2.24
 Flask==1.1.1
 Flask-Ask-alphavideo==2.1.0
 gunicorn==20.1.0
