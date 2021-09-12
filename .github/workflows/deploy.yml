@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - setup
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16.6.1'
+
+    - name: Install NPM packages
+      run: npm ci
+      
+    - name: crowdin
+      run: npm run crowdin:sync
+
+    - name: Build project
+      run: CI=false npm run build
+
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.BOT }}
+        cname: alpha-video.andrewstech.me
+        publish_dir: ./build
