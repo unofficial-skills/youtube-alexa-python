@@ -2,30 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alpha-video.andrewstech.me/it/blog</id>
     <title>ALPHA VIDEO Blog</title>
-    <updated>2021-09-12T16:14:17.264Z</updated>
+    <updated>2021-09-12T16:16:03.471Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://alpha-video.andrewstech.me/it/blog"/>
     <subtitle>ALPHA VIDEO Blog</subtitle>
     <icon>https://alpha-video.andrewstech.me/it/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Hello]]></title>
-        <id>Hello</id>
-        <link href="https://alpha-video.andrewstech.me/it/blog/Hello"/>
-        <updated>2021-09-12T16:14:17.264Z</updated>
-        <summary type="html"><![CDATA[The diy youtube alexa skill is coming soon.]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Getting-ready]]></title>
         <id>Getting-ready</id>
         <link href="https://alpha-video.andrewstech.me/it/blog/Getting-ready"/>
-        <updated>2021-09-12T16:14:17.264Z</updated>
+        <updated>2021-09-12T16:16:03.471Z</updated>
         <summary type="html"><![CDATA[The New skill has been under development for over 2 weeks now and has had an active beta test for over a week with some good feedback. The main job left to do is finish the documentation for release.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[release]]></title>
         <id>release</id>
         <link href="https://alpha-video.andrewstech.me/it/blog/release"/>
-        <updated>2021-09-12T16:14:17.264Z</updated>
+        <updated>2021-09-12T16:16:03.471Z</updated>
         <summary type="html"><![CDATA[Well I Said it would be out by Tuesday but its currently 23:25 GMT on a Monday. The skill is finally released enjoy.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello]]></title>
+        <id>Hello</id>
+        <link href="https://alpha-video.andrewstech.me/it/blog/Hello"/>
+        <updated>2021-09-12T16:16:03.467Z</updated>
+        <summary type="html"><![CDATA[The diy youtube alexa skill is coming soon.]]></summary>
     </entry>
 </feed>
