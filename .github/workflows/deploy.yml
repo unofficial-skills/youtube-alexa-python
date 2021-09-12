@@ -24,6 +24,8 @@ jobs:
       
     - name: crowdin
       run: npm run crowdin:sync
+      env:
+        CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
     - name: Build project
       run: CI=false npm run build
