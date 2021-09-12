@@ -20,7 +20,7 @@ jobs:
         node-version: '16.6.1'
 
     - name: Install NPM packages
-      run: npm ci
+      run: npm install -g
       
     - name: crowdin
       run: npm run crowdin:sync
