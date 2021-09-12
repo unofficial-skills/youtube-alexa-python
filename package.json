@@ -43,6 +43,5 @@
     ]
   },
   "devDependencies": {
-    "docusaurus-plugin-google-adsense": "^0.1.0"
   }
 }
