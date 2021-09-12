@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Hello","permalink":"/es/blog/Hello"},{"title":"Getting-ready","permalink":"/es/blog/Getting-ready"},{"title":"release","permalink":"/es/blog/release"}]}')}}]);

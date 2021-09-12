@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>ALPHA VIDEO Blog</title>
+        <link>https://alpha-video.andrewstech.me/blog</link>
+        <description>ALPHA VIDEO Blog</description>
+        <lastBuildDate>Sun, 12 Sep 2021 15:39:33 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Hello]]></title>
+            <link>https://alpha-video.andrewstech.me/blog/Hello</link>
+            <guid>Hello</guid>
+            <pubDate>Sun, 12 Sep 2021 15:39:33 GMT</pubDate>
+            <description><![CDATA[The diy youtube alexa skill is coming soon.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Getting-ready]]></title>
+            <link>https://alpha-video.andrewstech.me/blog/Getting-ready</link>
+            <guid>Getting-ready</guid>
+            <pubDate>Sun, 12 Sep 2021 15:39:33 GMT</pubDate>
+            <description><![CDATA[The New skill has been under development for over 2 weeks now and has had an active beta test for over a week with some good feedback. The main job left to do is finish the documentation for release.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[release]]></title>
+            <link>https://alpha-video.andrewstech.me/blog/release</link>
+            <guid>release</guid>
+            <pubDate>Sun, 12 Sep 2021 15:39:33 GMT</pubDate>
+            <description><![CDATA[Well I Said it would be out by Tuesday but its currently 23:25 GMT on a Monday. The skill is finally released enjoy.]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,8 @@
+1.7
+https://alpha-video.andrewstech.me/update.txt
+
+
+[Update]
+Version=1.7
+URL=https://alpha-video.andrewstech.me/update.txt
+
